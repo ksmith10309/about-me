@@ -1,25 +1,58 @@
-"use strict";
+'use strict';
 
-alert('Please answer the following questions with Y or N');
+alert('Please answer the following questions about me with Y or N');
 
-var answerOne = prompt('Do you like to code?');
+var answerOne = prompt('Am I over 30?');
 console.log('answerOne', answerOne);
 
 if (answerOne.toUpperCase() === 'Y') {
-    alert('That\'s great!');
+  alert('That\'s right! I\'m 32');
 } else if (answerOne.toUpperCase() === 'N') {
-    alert('That\'s too bad!');
+  alert('No, I\'m definitely over 30.');
 } else {
-    alert('Please enter either Y or N');
+  alert('Please enter either Y or N');
 }
 
-var answerTwo = prompt('Do you like HTML?');
+var answerTwo = prompt('Do I live in Seattle?');
 console.log('answerTwo', answerTwo);
 
 if (answerTwo.toUpperCase() === 'Y') {
-    alert('That\'s great!');
+  alert('No, I live in Bothell.');
 } else if (answerTwo.toUpperCase() === 'N') {
-    alert('That\'s too bad!');
+  alert('That\'s correct. I live in Bothell.');
 } else {
-    alert('Please enter either Y or N');
+  alert('Please enter either Y or N');
+}
+
+var answerThree = prompt('Do I have any cats?');
+console.log('answerTwo', answerThree);
+
+if (answerThree.toUpperCase() === 'Y') {
+  alert('No, I have 2 dogs.');
+} else if (answerThree.toUpperCase() === 'N') {
+  alert('That\'s correct. I only have dogs.');
+} else {
+  alert('Please enter either Y or N');
+}
+
+var answerFour = prompt('Was I ever a veterinary technician?');
+console.log('answerFour', answerFour);
+
+if (answerFour.toUpperCase() === 'Y') {
+  alert('That\'s correct.');
+} else if (answerFour.toUpperCase() === 'N') {
+  alert('Wrong, I definitely was a veterinary technician.');
+} else {
+  alert('Please enter either Y or N');
+}
+
+var answerFive = prompt('Have I ever been bit by a cat?');
+console.log('answerTwo', answerFive);
+
+if (answerFive.toUpperCase() === 'Y') {
+  alert('No, I\'ve only been bit by dogs, ferrets, rabbits, and birds.');
+} else if (answerFive.toUpperCase() === 'N') {
+  alert('Correct. I\'ve only been bit by dogs, ferrets, rabbits, and birds');
+} else {
+  alert('Please enter either Y or N');
 }
