@@ -6,7 +6,7 @@ var answerOne = prompt('Am I over 30?');
 console.log('answerOne', answerOne);
 
 if (answerOne.toUpperCase() === 'Y') {
-  alert('That\'s right! I\'m 32');
+  alert('That\'s right! I\'m 32.');
 } else if (answerOne.toUpperCase() === 'N') {
   alert('No, I\'m definitely over 30.');
 } else {
@@ -25,7 +25,7 @@ if (answerTwo.toUpperCase() === 'Y') {
 }
 
 var answerThree = prompt('Do I have any cats?');
-console.log('answerTwo', answerThree);
+console.log('answerThree', answerThree);
 
 if (answerThree.toUpperCase() === 'Y') {
   alert('No, I have 2 dogs.');
@@ -47,7 +47,7 @@ if (answerFour.toUpperCase() === 'Y') {
 }
 
 var answerFive = prompt('Have I ever been bit by a cat?');
-console.log('answerTwo', answerFive);
+console.log('answerFive', answerFive);
 
 if (answerFive.toUpperCase() === 'Y') {
   alert('No, I\'ve only been bit by dogs, ferrets, rabbits, and birds.');
