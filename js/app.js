@@ -3,7 +3,7 @@
 alert('Please answer the following questions about me with Y or N');
 
 var answerOne = prompt('Am I over 30?');
-console.log('answerOne', answerOne);
+console.log('over 30', answerOne);
 
 if (answerOne.toUpperCase() === 'Y') {
   alert('That\'s right! I\'m 32.');
@@ -14,7 +14,7 @@ if (answerOne.toUpperCase() === 'Y') {
 }
 
 var answerTwo = prompt('Do I live in Seattle?');
-console.log('answerTwo', answerTwo);
+console.log('live in Seattle', answerTwo);
 
 if (answerTwo.toUpperCase() === 'Y') {
   alert('No, I live in Bothell.');
@@ -25,7 +25,7 @@ if (answerTwo.toUpperCase() === 'Y') {
 }
 
 var answerThree = prompt('Do I have any cats?');
-console.log('answerThree', answerThree);
+console.log('have cats', answerThree);
 
 if (answerThree.toUpperCase() === 'Y') {
   alert('No, I have 2 dogs.');
@@ -36,7 +36,7 @@ if (answerThree.toUpperCase() === 'Y') {
 }
 
 var answerFour = prompt('Was I ever a veterinary technician?');
-console.log('answerFour', answerFour);
+console.log('veterinary technician', answerFour);
 
 if (answerFour.toUpperCase() === 'Y') {
   alert('That\'s correct.');
@@ -47,7 +47,7 @@ if (answerFour.toUpperCase() === 'Y') {
 }
 
 var answerFive = prompt('Have I ever been bit by a cat?');
-console.log('answerFive', answerFive);
+console.log('bit by a cat', answerFive);
 
 if (answerFive.toUpperCase() === 'Y') {
   alert('No, I\'ve only been bit by dogs, ferrets, rabbits, and birds.');
