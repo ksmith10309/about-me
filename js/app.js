@@ -1,6 +1,8 @@
 'use strict';
 
-alert('Please answer the following questions about me with Y or N');
+var userName = prompt('What\'s your name?');
+
+alert('Hi ' + userName + '! Please answer the following questions about me with Y or N');
 
 var answerOne = prompt('Am I over 30?');
 console.log('over 30', answerOne);
