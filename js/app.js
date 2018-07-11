@@ -66,40 +66,65 @@ if (answerFive.toUpperCase() === 'Y') {
   alert('Please enter either Y or N');
 }
 
-var guessesLeft = 4;
+var guessesLeftFor6 = 4;
+var answerSix = prompt('What is my favorite number? You have ' + guessesLeftFor6 + ' guesses.');
 
-var answerSix = prompt('What is my favorite number? You have ' + guessesLeft + ' guesses.');
-
-while(guessesLeft > 0) {
+while (guessesLeftFor6 > 0) {
   console.log('favorite number', answerSix);
   if (parseInt(answerSix) === 28) {
     correctCount++;
     alert('You guessed my favorite number! Good job!');
-    guessesLeft = 0;
+    guessesLeftFor6 = 0;
   } else if (isNaN(parseInt(answerSix))) {
     answerSix = prompt('That didn\'t count because that wasn\'t a number. Try guessing a number.');
-  } else if (answerSix > 28 && guessesLeft > 2) {
-    guessesLeft--;
-    answerSix = prompt('That\'s too high. You have ' + guessesLeft + ' guesses left. Please try again.');
-  } else if (answerSix < 28 && guessesLeft > 2) {
-    guessesLeft--;
-    answerSix = prompt('That\'s too low. You have ' + guessesLeft + ' guesses left. Please try again.');
-  } else if (answerSix > 28 && guessesLeft > 1) {
-    guessesLeft--;
-    answerSix = prompt('That\'s too high. You only have ' + guessesLeft + ' guess left.');
-  } else if (answerSix < 28 && guessesLeft > 1) {
-    guessesLeft--;
-    answerSix = prompt('That\'s too low. You only have ' + guessesLeft + ' guess left.');
-  } else if (parseInt(answerSix) !== 28 && guessesLeft === 1) {
-    guessesLeft--;
+  } else if (answerSix > 28 && guessesLeftFor6 > 2) {
+    guessesLeftFor6--;
+    answerSix = prompt('That\'s too high. You have ' + guessesLeftFor6 + ' guesses left. Please try again.');
+  } else if (answerSix < 28 && guessesLeftFor6 > 2) {
+    guessesLeftFor6--;
+    answerSix = prompt('That\'s too low. You have ' + guessesLeftFor6 + ' guesses left. Please try again.');
+  } else if (answerSix > 28 && guessesLeftFor6 > 1) {
+    guessesLeftFor6--;
+    answerSix = prompt('That\'s too high. You only have ' + guessesLeftFor6 + ' guess left.');
+  } else if (answerSix < 28 && guessesLeftFor6 > 1) {
+    guessesLeftFor6--;
+    answerSix = prompt('That\'s too low. You only have ' + guessesLeftFor6 + ' guess left.');
+  } else if (parseInt(answerSix) !== 28 && guessesLeftFor6 === 1) {
+    guessesLeftFor6--;
     alert('Sorry, you\'re out of guesses. My favorite number is 28.');
   }
 }
 
+var guessesLeftFor7 = 6;
+var statesLived = ['California', 'Nevada', 'Kansas', 'Mississippi'];
+
+var answerSeven = prompt('Can you guess a state I have lived in other than Washington? Don\'t use abbreviations. You have ' + guessesLeftFor7 + ' guesses.');
+
+while (guessesLeftFor7 > 0) {
+  console.log('state lived', answerSeven);
+  for (var i = 0; i < statesLived.length; i++) {
+    if (answerSeven.toUpperCase() === statesLived[i].toUpperCase()) {
+      correctCount++;
+      alert('I did used to live in ' + answerSeven + '!');
+      guessesLeftFor7 = 0;
+    }
+  }
+
+  if (guessesLeftFor7 > 1) {
+    guessesLeftFor7--;
+    answerSeven = prompt('No, I\'ve never lived in ' + answerSeven + ' before. You have ' + guessesLeftFor7 + ' guesses left.');
+  } else if (guessesLeftFor7 === 1) {
+    guessesLeftFor7--;
+    alert('Sorry, you\'re out of guesses.');
+  }
+}
+
+alert('I have lived in ' + statesLived.join(', ') + '.');
+
 if (correctCount > 4) {
-  alert('Wow! You scored ' + correctCount + ' out of 7! We must be good friends!');
+  alert('Wow ' + userName + '! You scored ' + correctCount + ' out of 7! We must be good friends!');
 } else if (correctCount > 2) {
-  alert('You scored ' + correctCount + ' out of 7. That\'s pretty good.');
+  alert(userName + ', you scored ' + correctCount + ' out of 7. That\'s pretty good.');
 } else {
-  alert('You only scored ' + correctCount + ' out of 7. You don\'t know me very well at all.');
+  alert('You only scored ' + correctCount + ' out of 7. You don\'t know me very well at all, ' + userName + '.');
 }
