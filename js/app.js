@@ -81,34 +81,37 @@ function q5(){
 }
 q5();
 
-var guessesLeftFor6 = 4;
-var answerSix = prompt('What is my favorite number? You have ' + guessesLeftFor6 + ' guesses.');
+function q6(){
+  var guessesLeftFor6 = 4;
+  var answerSix = prompt('What is my favorite number? You have ' + guessesLeftFor6 + ' guesses.');
 
-while (guessesLeftFor6 > 0) {
-  console.log('favorite number', answerSix);
-  if (parseInt(answerSix) === 28) {
-    correctCount++;
-    alert('You guessed my favorite number! Good job!');
-    guessesLeftFor6 = 0;
-  } else if (isNaN(parseInt(answerSix))) {
-    answerSix = prompt('That didn\'t count because that wasn\'t a number. Try guessing a number.');
-  } else if (answerSix > 28 && guessesLeftFor6 > 2) {
-    guessesLeftFor6--;
-    answerSix = prompt('That\'s too high. You have ' + guessesLeftFor6 + ' guesses left. Please try again.');
-  } else if (answerSix < 28 && guessesLeftFor6 > 2) {
-    guessesLeftFor6--;
-    answerSix = prompt('That\'s too low. You have ' + guessesLeftFor6 + ' guesses left. Please try again.');
-  } else if (answerSix > 28 && guessesLeftFor6 > 1) {
-    guessesLeftFor6--;
-    answerSix = prompt('That\'s too high. You only have ' + guessesLeftFor6 + ' guess left.');
-  } else if (answerSix < 28 && guessesLeftFor6 > 1) {
-    guessesLeftFor6--;
-    answerSix = prompt('That\'s too low. You only have ' + guessesLeftFor6 + ' guess left.');
-  } else if (parseInt(answerSix) !== 28 && guessesLeftFor6 === 1) {
-    guessesLeftFor6--;
-    alert('Sorry, you\'re out of guesses. My favorite number is 28.');
+  while (guessesLeftFor6 > 0) {
+    console.log('favorite number', answerSix);
+    if (parseInt(answerSix) === 28) {
+      correctCount++;
+      alert('You guessed my favorite number! Good job!');
+      guessesLeftFor6 = 0;
+    } else if (isNaN(parseInt(answerSix))) {
+      answerSix = prompt('That didn\'t count because that wasn\'t a number. Try guessing a number.');
+    } else if (answerSix > 28 && guessesLeftFor6 > 2) {
+      guessesLeftFor6--;
+      answerSix = prompt('That\'s too high. You have ' + guessesLeftFor6 + ' guesses left. Please try again.');
+    } else if (answerSix < 28 && guessesLeftFor6 > 2) {
+      guessesLeftFor6--;
+      answerSix = prompt('That\'s too low. You have ' + guessesLeftFor6 + ' guesses left. Please try again.');
+    } else if (answerSix > 28 && guessesLeftFor6 > 1) {
+      guessesLeftFor6--;
+      answerSix = prompt('That\'s too high. You only have ' + guessesLeftFor6 + ' guess left.');
+    } else if (answerSix < 28 && guessesLeftFor6 > 1) {
+      guessesLeftFor6--;
+      answerSix = prompt('That\'s too low. You only have ' + guessesLeftFor6 + ' guess left.');
+    } else if (parseInt(answerSix) !== 28 && guessesLeftFor6 === 1) {
+      guessesLeftFor6--;
+      alert('Sorry, you\'re out of guesses. My favorite number is 28.');
+    }
   }
 }
+q6();
 
 var guessesLeftFor7 = 6;
 var statesLived = ['California', 'Nevada', 'Kansas', 'Mississippi'];
