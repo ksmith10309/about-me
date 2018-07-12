@@ -113,36 +113,39 @@ function q6(){
 }
 q6();
 
-var guessesLeftFor7 = 6;
-var statesLived = ['California', 'Nevada', 'Kansas', 'Mississippi'];
+function q7(){
+  var guessesLeftFor7 = 6;
+  var statesLived = ['California', 'Nevada', 'Kansas', 'Mississippi'];
 
-var answerSeven = prompt('Can you guess a state I have lived in other than Washington? Don\'t use abbreviations. You have ' + guessesLeftFor7 + ' guesses.');
+  var answerSeven = prompt('Can you guess a state I have lived in other than Washington? Don\'t use abbreviations. You have ' + guessesLeftFor7 + ' guesses.');
 
-while (guessesLeftFor7 > 0) {
-  console.log('state lived', answerSeven);
-  for (var i = 0; i < statesLived.length; i++) {
-    if (answerSeven.toUpperCase() === statesLived[i].toUpperCase()) {
-      correctCount++;
-      alert('I did used to live in ' + answerSeven + '!');
-      guessesLeftFor7 = 0;
+  while (guessesLeftFor7 > 0) {
+    console.log('state lived', answerSeven);
+    for (var i = 0; i < statesLived.length; i++) {
+      if (answerSeven.toUpperCase() === statesLived[i].toUpperCase()) {
+        correctCount++;
+        alert('I did used to live in ' + answerSeven + '!');
+        guessesLeftFor7 = 0;
+      }
+    }
+
+    if (guessesLeftFor7 > 1) {
+      guessesLeftFor7--;
+      answerSeven = prompt('No, I\'ve never lived in ' + answerSeven + ' before. You have ' + guessesLeftFor7 + ' guesses left.');
+    } else if (guessesLeftFor7 === 1) {
+      guessesLeftFor7--;
+      alert('Sorry, you\'re out of guesses.');
     }
   }
 
-  if (guessesLeftFor7 > 1) {
-    guessesLeftFor7--;
-    answerSeven = prompt('No, I\'ve never lived in ' + answerSeven + ' before. You have ' + guessesLeftFor7 + ' guesses left.');
-  } else if (guessesLeftFor7 === 1) {
-    guessesLeftFor7--;
-    alert('Sorry, you\'re out of guesses.');
+  alert('I have lived in ' + statesLived.join(', ') + '.');
+
+  if (correctCount > 4) {
+    alert('Wow ' + userName + '! You scored ' + correctCount + ' out of 7! We must be good friends!');
+  } else if (correctCount > 2) {
+    alert(userName + ', you scored ' + correctCount + ' out of 7. That\'s pretty good.');
+  } else {
+    alert('You only scored ' + correctCount + ' out of 7. You don\'t know me very well at all, ' + userName + '.');
   }
 }
-
-alert('I have lived in ' + statesLived.join(', ') + '.');
-
-if (correctCount > 4) {
-  alert('Wow ' + userName + '! You scored ' + correctCount + ' out of 7! We must be good friends!');
-} else if (correctCount > 2) {
-  alert(userName + ', you scored ' + correctCount + ' out of 7. That\'s pretty good.');
-} else {
-  alert('You only scored ' + correctCount + ' out of 7. You don\'t know me very well at all, ' + userName + '.');
-}
+q7();
