@@ -54,26 +54,32 @@ q3();
 var answerFour = prompt('Was I ever a veterinary technician?');
 console.log('veterinary technician', answerFour);
 
-if (answerFour.toUpperCase() === 'Y') {
-  alert('That\'s correct.');
-  correctCount++;
-} else if (answerFour.toUpperCase() === 'N') {
-  alert('Wrong, I definitely was a veterinary technician.');
-} else {
-  alert('Please enter either Y or N');
+function q4(){
+  if (answerFour.toUpperCase() === 'Y') {
+    alert('That\'s correct.');
+    correctCount++;
+  } else if (answerFour.toUpperCase() === 'N') {
+    alert('Wrong, I definitely was a veterinary technician.');
+  } else {
+    alert('Please enter either Y or N');
+  }
 }
+q4();
 
 var answerFive = prompt('Have I ever been bit by a cat?');
 console.log('bit by a cat', answerFive);
 
-if (answerFive.toUpperCase() === 'Y') {
-  alert('No, I\'ve only been bit by dogs, ferrets, rabbits, and birds.');
-} else if (answerFive.toUpperCase() === 'N') {
-  alert('Correct. I\'ve only been bit by dogs, ferrets, rabbits, and birds');
-  correctCount++;
-} else {
-  alert('Please enter either Y or N');
+function q5(){
+  if (answerFive.toUpperCase() === 'Y') {
+    alert('No, I\'ve only been bit by dogs, ferrets, rabbits, and birds.');
+  } else if (answerFive.toUpperCase() === 'N') {
+    alert('Correct. I\'ve only been bit by dogs, ferrets, rabbits, and birds');
+    correctCount++;
+  } else {
+    alert('Please enter either Y or N');
+  }
 }
+q5();
 
 var guessesLeftFor6 = 4;
 var answerSix = prompt('What is my favorite number? You have ' + guessesLeftFor6 + ' guesses.');
