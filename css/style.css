@@ -1,19 +1,17 @@
 body {
     background-color: black;
+    color: white;
     text-align: center;
     font-family: sans-serif;
 }
 
 section {
     border: 3px solid white;
-    width: 300px;
+    width: 60%;
     margin: 30px auto;
+    padding: 30px;
 }
 
-section h2 {
-    color: white;
-}
-
-section p {
-    color: white;
+ul, ol {
+    text-align: left;
 }
