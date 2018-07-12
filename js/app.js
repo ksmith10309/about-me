@@ -9,26 +9,32 @@ var correctCount = 0;
 var answerOne = prompt('Am I over 30?');
 console.log('over 30', answerOne);
 
-if (answerOne.toUpperCase() === 'Y') {
-  alert('That\'s right! I\'m 32.');
-  correctCount++;
-} else if (answerOne.toUpperCase() === 'N') {
-  alert('No, I\'m definitely over 30.');
-} else {
-  alert('Please enter either Y or N');
+function q1(){
+  if (answerOne.toUpperCase() === 'Y') {
+    alert('That\'s right! I\'m 32.');
+    correctCount++;
+  } else if (answerOne.toUpperCase() === 'N') {
+    alert('No, I\'m definitely over 30.');
+  } else {
+    alert('Please enter either Y or N');
+  }
 }
+q1();
 
 var answerTwo = prompt('Do I live in Seattle?');
 console.log('live in Seattle', answerTwo);
 
-if (answerTwo.toUpperCase() === 'Y') {
-  alert('No, I live in Bothell.');
-} else if (answerTwo.toUpperCase() === 'N') {
-  alert('That\'s correct. I live in Bothell.');
-  correctCount++;
-} else {
-  alert('Please enter either Y or N');
+function q2(){
+  if (answerTwo.toUpperCase() === 'Y') {
+    alert('No, I live in Bothell.');
+  } else if (answerTwo.toUpperCase() === 'N') {
+    alert('That\'s correct. I live in Bothell.');
+    correctCount++;
+  } else {
+    alert('Please enter either Y or N');
+  }
 }
+q2();
 
 var answerThree = prompt('Do I have any cats?');
 console.log('have cats', answerThree);
