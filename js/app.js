@@ -39,14 +39,17 @@ q2();
 var answerThree = prompt('Do I have any cats?');
 console.log('have cats', answerThree);
 
-if (answerThree.toUpperCase() === 'Y') {
-  alert('No, I have 2 dogs.');
-} else if (answerThree.toUpperCase() === 'N') {
-  alert('That\'s correct. I only have dogs.');
-  correctCount++;
-} else {
-  alert('Please enter either Y or N');
+function q3(){
+  if (answerThree.toUpperCase() === 'Y') {
+    alert('No, I have 2 dogs.');
+  } else if (answerThree.toUpperCase() === 'N') {
+    alert('That\'s correct. I only have dogs.');
+    correctCount++;
+  } else {
+    alert('Please enter either Y or N');
+  }
 }
+q3();
 
 var answerFour = prompt('Was I ever a veterinary technician?');
 console.log('veterinary technician', answerFour);
