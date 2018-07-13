@@ -1,19 +1,23 @@
 'use strict';
 
-var userName = prompt('What\'s your name?');
+var userName;
 
-alert('Hi ' + userName + '! Please answer the following 5 questions about me with either a Y or an N.');
+function qUserName() {
+  userName = prompt('What\'s your name?');
+  alert('Hi ' + userName + '! Please answer the following 5 questions about me with either a Y or an N.');
+}
+qUserName();
 
 var correctCount = 0;
 
-var answerOne = prompt('Am I over 30?');
-console.log('over 30', answerOne);
+function q1() {
+  var answerOne = prompt('Am I over 30?').toUpperCase();
+  console.log('over 30', answerOne);
 
-function q1(){
-  if (answerOne.toUpperCase() === 'Y') {
+  if (answerOne === 'Y') {
     alert('That\'s right! I\'m 32.');
     correctCount++;
-  } else if (answerOne.toUpperCase() === 'N') {
+  } else if (answerOne === 'N') {
     alert('No, I\'m definitely over 30.');
   } else {
     alert('Please enter either Y or N');
@@ -21,13 +25,13 @@ function q1(){
 }
 q1();
 
-var answerTwo = prompt('Do I live in Seattle?');
-console.log('live in Seattle', answerTwo);
+function q2() {
+  var answerTwo = prompt('Do I live in Seattle?').toUpperCase();
+  console.log('live in Seattle', answerTwo);
 
-function q2(){
-  if (answerTwo.toUpperCase() === 'Y') {
+  if (answerTwo === 'Y') {
     alert('No, I live in Bothell.');
-  } else if (answerTwo.toUpperCase() === 'N') {
+  } else if (answerTwo === 'N') {
     alert('That\'s correct. I live in Bothell.');
     correctCount++;
   } else {
@@ -36,13 +40,13 @@ function q2(){
 }
 q2();
 
-var answerThree = prompt('Do I have any cats?');
-console.log('have cats', answerThree);
+function q3() {
+  var answerThree = prompt('Do I have any cats?').toUpperCase();
+  console.log('have cats', answerThree);
 
-function q3(){
-  if (answerThree.toUpperCase() === 'Y') {
+  if (answerThree === 'Y') {
     alert('No, I have 2 dogs.');
-  } else if (answerThree.toUpperCase() === 'N') {
+  } else if (answerThree === 'N') {
     alert('That\'s correct. I only have dogs.');
     correctCount++;
   } else {
@@ -51,14 +55,14 @@ function q3(){
 }
 q3();
 
-var answerFour = prompt('Was I ever a veterinary technician?');
-console.log('veterinary technician', answerFour);
+function q4() {
+  var answerFour = prompt('Was I ever a veterinary technician?').toUpperCase();
+  console.log('veterinary technician', answerFour);
 
-function q4(){
-  if (answerFour.toUpperCase() === 'Y') {
+  if (answerFour === 'Y') {
     alert('That\'s correct.');
     correctCount++;
-  } else if (answerFour.toUpperCase() === 'N') {
+  } else if (answerFour === 'N') {
     alert('Wrong, I definitely was a veterinary technician.');
   } else {
     alert('Please enter either Y or N');
@@ -66,13 +70,13 @@ function q4(){
 }
 q4();
 
-var answerFive = prompt('Have I ever been bit by a cat?');
-console.log('bit by a cat', answerFive);
+function q5() {
+  var answerFive = prompt('Have I ever been bit by a cat?').toUpperCase();
+  console.log('bit by a cat', answerFive);
 
-function q5(){
-  if (answerFive.toUpperCase() === 'Y') {
+  if (answerFive === 'Y') {
     alert('No, I\'ve only been bit by dogs, ferrets, rabbits, and birds.');
-  } else if (answerFive.toUpperCase() === 'N') {
+  } else if (answerFive === 'N') {
     alert('Correct. I\'ve only been bit by dogs, ferrets, rabbits, and birds');
     correctCount++;
   } else {
@@ -81,7 +85,7 @@ function q5(){
 }
 q5();
 
-function q6(){
+function q6() {
   var guessesLeftFor6 = 4;
   var answerSix = prompt('What is my favorite number? You have ' + guessesLeftFor6 + ' guesses.');
 
@@ -113,7 +117,7 @@ function q6(){
 }
 q6();
 
-function q7(){
+function q7() {
   var guessesLeftFor7 = 6;
   var statesLived = ['California', 'Nevada', 'Kansas', 'Mississippi'];
 
